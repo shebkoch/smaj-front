@@ -1,0 +1,14 @@
+.top-bar-content{
+  display: flex;
+  /*TODO*/
+  width: 900px;
+  background-color: var(--smaj-content-background);
+  margin: 0 auto 30px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0 0 30px 30px;
+}
+.top-bar-content a{
+  margin: 0.6em 0 0.6em 0;
+}
+

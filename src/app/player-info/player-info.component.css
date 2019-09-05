@@ -1,0 +1,28 @@
+.main-info{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.avatar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.avatar img{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.last-result{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.green{
+  color: var(--smaj-green);
+}
+.red{
+  color: var(--smaj-red);
+}
