@@ -10,7 +10,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class MatchService {
-  url = 'http://localhost:8080/last_info/1';
+  url = 'http://localhost:8091/last_info/1';
   private _lastPlayerResult: PlayerResultEntity;
 
   constructor(private http: HttpClient) {

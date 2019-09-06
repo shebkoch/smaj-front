@@ -15,7 +15,7 @@
     </div>
     <div class="key-value-block">
       <p class="normal-text">% побед</p>
-      <p class="big-text">{{player?.winPercent}}%</p>
+      <p class="big-text">{{winPercent | number: '2.0-1'}}%</p>
 
 
     </div>
@@ -45,8 +45,8 @@
     <div class="key-value-block">
       <!--        TODO-->
       <p class="normal-text"
-         [ngClass]="lastResult?.isWinner ? 'green' : 'red'">{{lastResult?.isWinner ? 'Победа' : 'Поражение'}}</p>
-      <p class="mini-text" [ngClass]="lastResult?.isWinner ? 'green' : 'red'"> {{ lastResult?.mmrChange }}</p>
+         [ngClass]="lastResult?.winner ? 'green' : 'red'">{{lastResult?.winner ? 'Победа' : 'Поражение'}}</p>
+      <p class="mini-text" [ngClass]="lastResult?.mmrChange> 0 ? 'green' : 'red'"> {{lastResult?.mmrChange> 0 ? '+':''}}{{ lastResult?.mmrChange }}</p>
     </div>
     <div class="factions">
       <div class="faction-images">

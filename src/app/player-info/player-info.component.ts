@@ -46,6 +46,10 @@ export class PlayerInfoComponent implements OnInit {
     if (faction == null) { return null; }
     return this.styleService.getImagePath(faction);
   }
+  get winPercent(): number {
+    if (this.player.matchCount == 0) { return 0; }
+    return this.player.winCount / this.player.matchCount * 100;
+  }
   ngOnInit() {
 
   }

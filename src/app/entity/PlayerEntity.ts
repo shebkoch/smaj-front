@@ -9,12 +9,6 @@ export class PlayerEntity {
   private _bestFaction: number;
   private _bestFactionEntity: FactionEntity;
 
-  get winPercent(): number {
-    if (this.matchCount == 0) { return 0; }
-    return this.winCount / this.matchCount * 100;
-  }
-
-
   get id(): number {
     return this._id;
   }

@@ -11,7 +11,7 @@ export class PlayerResultEntity {
   private _score: number;
   private _mmrChange: number;
 
-  private _isWinner: boolean;
+  private _winner: boolean;
 
   private _factionEntity1: FactionEntity;
   private _factionEntity2: FactionEntity;
@@ -75,12 +75,12 @@ export class PlayerResultEntity {
     this._mmrChange = value;
   }
 
-  get isWinner(): boolean {
-    return this._isWinner;
+  get winner(): boolean {
+    return this._winner;
   }
 
-  set isWinner(value: boolean) {
-    this._isWinner = value;
+  set winner(value: boolean) {
+    this._winner = value;
   }
 
   get factionEntity1(): FactionEntity {
