@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   justify-content: space-around;
+  padding: 5% 0 4% 0;
 }
 .avatar{
   display: flex;
@@ -19,6 +20,30 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding: 5% 0 2% 0;
+}
+.score{
+  /*color: #484c60;*/
+}
+.bars{
+  width: 7em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.thisScore{
+  border-radius: 6px 0 0 6px;
+  background-color: var(--smaj-green);
+  height: 4px;
+}
+.key-value-block{
+  line-height: 0;
+}
+.maxScore{
+  height: 4px;
+  border-radius: 0 6px 6px 0;
+  background-color: var(--smaj-red);
 }
 .green{
   color: var(--smaj-green);
@@ -26,3 +51,17 @@
 .red{
   color: var(--smaj-red);
 }
+.faction-images img{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.right{
+  right: 20px;
+}
+.factions{
+  display: flex;
+  flex-direction: row;
+}
+

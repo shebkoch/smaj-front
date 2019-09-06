@@ -7,6 +7,7 @@ import {MatchService} from '../match.service';
 import {Observable} from 'rxjs';
 import {of} from 'rxjs';
 import {delay} from 'rxjs/operators';
+import {StyleService} from '../style.service';
 
 
 @Component({
@@ -16,10 +17,9 @@ import {delay} from 'rxjs/operators';
 })
 export class PlayerInfoComponent implements OnInit {
   private player: PlayerEntity;
-  private _s: string;
   private lastResult: PlayerResultEntity = null;
 
-  constructor(private matchService: MatchService) {
+  constructor(private matchService: MatchService, private styleService : StyleService) {
     // this.sss = 'sasasa';
     // this._s = 'test';
     matchService.lastPlayerResult().subscribe((
@@ -35,7 +35,17 @@ export class PlayerInfoComponent implements OnInit {
     // this.player.matchCount = 8;
     // this.player.winCount = 2;
   }
-
+  public scoreWidth() {
+    if (this.lastResult == null) { return 0; }
+    return this.lastResult.score / this.lastResult.matchEntity.winnerScore * 100;
+  }
+  public maxScoreWidth() {
+    return 100 - this.scoreWidth();
+  }
+  public imagePath(faction: FactionEntity) {
+    if (faction == null) { return null; }
+    return this.styleService.getImagePath(faction);
+  }
   ngOnInit() {
 
   }

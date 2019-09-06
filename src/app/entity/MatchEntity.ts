@@ -3,7 +3,16 @@ export class MatchEntity {
   private _ctime: Date;
   private _etime: Date;
   private _isRating: boolean;
+  private _winnerScore: number;
 
+
+  get winnerScore(): number {
+    return this._winnerScore;
+  }
+
+  set winnerScore(value: number) {
+    this._winnerScore = value;
+  }
 
   get id(): number {
     return this._id;

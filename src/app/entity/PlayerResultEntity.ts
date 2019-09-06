@@ -12,7 +12,6 @@ export class PlayerResultEntity {
   private _mmrChange: number;
 
   private _isWinner: boolean;
-  private _maxScore: number;
 
   private _factionEntity1: FactionEntity;
   private _factionEntity2: FactionEntity;
@@ -82,14 +81,6 @@ export class PlayerResultEntity {
 
   set isWinner(value: boolean) {
     this._isWinner = value;
-  }
-
-  get maxScore(): number {
-    return this._maxScore;
-  }
-
-  set maxScore(value: number) {
-    this._maxScore = value;
   }
 
   get factionEntity1(): FactionEntity {
