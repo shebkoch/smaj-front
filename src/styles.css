@@ -34,10 +34,15 @@ a{
   text-align: center;
 }
 .content-block{
+  display: flex;
+  flex-direction: column;
   border-radius: 20px;
   background-color: var(--smaj-content-background);
   /*TODO*/
   width: 1024px;
   margin: 0 auto 30px;
+}
+.selectable:hover{
+  background:#242d4a
 }
 

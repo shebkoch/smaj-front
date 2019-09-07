@@ -1,0 +1,39 @@
+a{
+  text-decoration: none
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.avatar{
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+}
+.player{
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+}
+.place{
+  line-height: 0;
+  font-size: 40px;
+}
+.player{
+
+}
+.mmr{
+
+}
+.win{
+  width: 50px;
+}
+.match{
+  width: 50px;
+}
+.faction{
+  width: 200px;
+}

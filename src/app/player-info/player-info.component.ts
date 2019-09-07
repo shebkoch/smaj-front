@@ -8,6 +8,8 @@ import {Observable} from 'rxjs';
 import {of} from 'rxjs';
 import {delay} from 'rxjs/operators';
 import {StyleService} from '../style.service';
+import {dateNames} from '../utils';
+import {ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -18,16 +20,25 @@ import {StyleService} from '../style.service';
 export class PlayerInfoComponent implements OnInit {
   private player: PlayerEntity;
   private lastResult: PlayerResultEntity = null;
-
-  constructor(private matchService: MatchService, private styleService : StyleService) {
+  constructor(private activatedRoute: ActivatedRoute,
+              private matchService: MatchService,
+              private styleService : StyleService) {
     // this.sss = 'sasasa';
-    // this._s = 'test';
-    matchService.lastPlayerResult().subscribe((
-        data: PlayerResultEntity) => {
-        this.lastResult = data;
-        this.player = this.lastResult.playerEntity;
+    this.activatedRoute.params.subscribe(
+      params => {
+        let id = params['id'];
+        matchService.lastPlayerResult(id).subscribe((
+          data: PlayerResultEntity) => {
+            this.lastResult = data;
+          }
+        );
+        matchService.player(id).subscribe((
+          data: PlayerEntity) => {
+            this.player = data;
+          }
+        );
       }
-    );
+    )
 
     // this.player = new PlayerEntity();
     // this.player.name = 'Саня';
@@ -35,23 +46,15 @@ export class PlayerInfoComponent implements OnInit {
     // this.player.matchCount = 8;
     // this.player.winCount = 2;
   }
-  public scoreWidth() {
-    if (this.lastResult == null) { return 0; }
-    return this.lastResult.score / this.lastResult.matchEntity.winnerScore * 100;
+
+  ngOnInit() {
+
   }
-  public maxScoreWidth() {
-    return 100 - this.scoreWidth();
-  }
-  public imagePath(faction: FactionEntity) {
-    if (faction == null) { return null; }
-    return this.styleService.getImagePath(faction);
+  public getAvatar(){
+    return this.styleService.getAvatar(this.player);
   }
   get winPercent(): number {
     if (this.player.matchCount == 0) { return 0; }
     return this.player.winCount / this.player.matchCount * 100;
   }
-  ngOnInit() {
-
-  }
-
 }

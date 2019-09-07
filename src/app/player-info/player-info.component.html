@@ -1,5 +1,5 @@
 <div class="avatar">
-  <img src="assets/img/avatar-example.jpg">
+  <img [src]="getAvatar()">
   <p class="big-text">{{player?.name}}</p>
 </div>
 
@@ -15,7 +15,7 @@
     </div>
     <div class="key-value-block">
       <p class="normal-text">% побед</p>
-      <p class="big-text">{{winPercent | number: '2.0-1'}}%</p>
+      <p class="big-text">{{winPercent | number: '1.0-1'}}%</p>
 
 
     </div>
@@ -25,48 +25,16 @@
     </div>
     <div class="key-value-block">
       <p class="normal-text">лучшая фракция</p>
-
-      <!--      <p class="big-text">{{_player.bestFactionEntity.name}}</p>-->
-      <!--      <p class="normal-text"> {{_player.mmr}} </p>-->
+      <p class="big-text"
+         [ngStyle]="{'color' :  styleService.getColor(player?.bestFactionEntity)}">{{player?.bestFactionEntity?.name}}</p>
     </div>
   </div>
-  <div></div>
-  <div class="last-result">
-    <div class="key-value-block">
-      <!--        TODO-->
-      <p class="normal-text">2 дня назад</p>
-      <p class="mini-text">{{lastResult?.matchEntity?.isRating ? 'Рейтинг' : 'Паблик' }}</p>
+  <div *ngIf="lastResult!=null" class="last-result">
+    <div>
+      <p class="normal-text last-match">Последний матч</p>
     </div>
-    <div class="key-value-block">
-      <!--        TODO-->
-      <p class="normal-text">68</p>
-      <p class="mini-text">мин</p>
-    </div>
-    <div class="key-value-block">
-      <!--        TODO-->
-      <p class="normal-text"
-         [ngClass]="lastResult?.winner ? 'green' : 'red'">{{lastResult?.winner ? 'Победа' : 'Поражение'}}</p>
-      <p class="mini-text" [ngClass]="lastResult?.mmrChange> 0 ? 'green' : 'red'"> {{lastResult?.mmrChange> 0 ? '+':''}}{{ lastResult?.mmrChange }}</p>
-    </div>
-    <div class="factions">
-      <div class="faction-images">
-        <img src="{{imagePath(lastResult?.factionEntity1)}}">
-        <img class="right" src="{{imagePath(lastResult?.factionEntity2)}}">
-      </div>
-      <div class="key-value-block">
-        <p class="mini-text">{{lastResult?.factionEntity1?.name}}</p>
-        <p class="mini-text">{{lastResult?.factionEntity2?.name}}</p>
-      </div>
-    </div>
-    <div class="key-value-block">
-      <p class="score mini-text">{{lastResult?.score}}/{{lastResult?.matchEntity?.winnerScore}}</p>
-      <div class="bars">
-        <div class="bar thisScore" [ngStyle]="{'width.%': scoreWidth()}"></div>
-        <div class="bar maxScore" [ngStyle]="{'width.%': maxScoreWidth()}"></div>
-      </div>
-    </div>
+    <app-result-row [result]="lastResult"></app-result-row>
   </div>
-
-  <!--    <app-result-row [s]="ss"></app-result-row>-->
-  <!--    <app-match-row #lastMatchRow></app-match-row>-->
 </div>
+<app-top></app-top>
+<app-last-matches></app-last-matches>

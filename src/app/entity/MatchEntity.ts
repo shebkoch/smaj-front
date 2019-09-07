@@ -1,8 +1,8 @@
 export class MatchEntity {
   private _id: number;
-  private _ctime: Date;
-  private _etime: Date;
-  private _isRating: boolean;
+  private _ctime: number;
+  private _etime: number;
+  private _rating: boolean;
   private _winnerScore: number;
 
 
@@ -22,27 +22,27 @@ export class MatchEntity {
     this._id = value;
   }
 
-  get ctime(): Date {
+  get ctime(): number {
     return this._ctime;
   }
 
-  set ctime(value: Date) {
+  set ctime(value: number) {
     this._ctime = value;
   }
 
-  get etime(): Date {
+  get etime(): number {
     return this._etime;
   }
 
-  set etime(value: Date) {
+  set etime(value: number) {
     this._etime = value;
   }
 
-  get isRating(): boolean {
-    return this._isRating;
+  get rating(): boolean {
+    return this._rating;
   }
 
-  set isRating(value: boolean) {
-    this._isRating = value;
+  set rating(value: boolean) {
+    this._rating = value;
   }
 }

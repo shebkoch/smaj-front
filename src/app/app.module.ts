@@ -11,6 +11,7 @@ import {RouterModule} from '@angular/router';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ResultRowComponent } from './result-row/result-row.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PlayerRowComponent } from './player-row/player-row.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +22,14 @@ import { HttpClientModule } from '@angular/common/http';
     LastMatchesComponent,
     TopBarComponent,
     ResultRowComponent,
+    PlayerRowComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: '', component: PlayerInfoComponent },
+      { path: ':id', component: PlayerInfoComponent },
     ])
   ],
   providers: [],

@@ -1,1 +1,11 @@
-<p>top works!</p>
+<div class="content-block">1
+  <p class="big-text">Топ лучших</p>
+  <div class="content">
+    <app-player-row *ngIf="players?.length>0" [player]="players[0]" [place]="1"></app-player-row>
+    <app-player-row *ngIf="players?.length>1" [player]="players[1]" [place]="2"></app-player-row>
+    <app-player-row *ngIf="players?.length>2" [player]="players[2]" [place]="3"></app-player-row>
+    <app-player-row *ngIf="players?.length>3" [player]="players[3]" [place]="4"></app-player-row>
+    <app-player-row *ngIf="players?.length>4" [player]="players[4]" [place]="5"></app-player-row>
+    <app-player-row *ngIf="players?.length>5" [player]="players[5]" [place]="6"></app-player-row>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+.content{
+  display: flex;
+  flex-direction: column;
+}
+app-player-row{
+  padding: 1% 0;
+}

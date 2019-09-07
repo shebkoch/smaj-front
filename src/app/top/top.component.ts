@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatchService} from '../match.service';
+import {PlayerResultEntity} from '../entity/PlayerResultEntity';
 
 @Component({
   selector: 'app-top',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopComponent implements OnInit {
 
-  constructor() { }
+  players : any[];
+  constructor(private matchService: MatchService) {
+    matchService.players().subscribe((
+      data: object[]) => {
+        this.players = data;
+      }
+    );
+  }
 
   ngOnInit() {
   }
-
 }
