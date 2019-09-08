@@ -12,6 +12,8 @@ import {StyleService} from '../style.service';
 })
 export class ResultRowComponent implements OnInit {
   @Input() public result = new PlayerResultEntity();
+  @Input() public matchInfo: boolean = true;
+
   @Input() public agoWidth;
   @Input() public durWidth;
   @Input() public winWidth;

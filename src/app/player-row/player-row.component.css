@@ -1,7 +1,6 @@
 a{
   text-decoration: none
 }
-
 .content{
   display: flex;
   flex-direction: row;
@@ -13,6 +12,10 @@ a{
   width: 75px;
   height: 75px;
 }
+.name{
+  margin-left: 1em;
+}
+
 .player{
   width: 200px;
   display: flex;
@@ -21,9 +24,6 @@ a{
 .place{
   line-height: 0;
   font-size: 40px;
-}
-.player{
-
 }
 .mmr{
 

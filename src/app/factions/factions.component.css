@@ -1,0 +1,13 @@
+.content{
+  display: flex;
+  flex-direction: column;
+}
+.factions{
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+}
+.factions p{
+  text-align: left;
+  width: 100px;
+}

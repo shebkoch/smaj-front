@@ -1,14 +1,20 @@
 .top-bar-content{
-  display: flex;
   /*TODO*/
   width: 900px;
   background-color: var(--smaj-content-background);
   margin: 0 auto 30px;
-  justify-content: space-around;
-  align-items: center;
   border-radius: 0 0 30px 30px;
 }
-.top-bar-content div{
+.content div{
   padding: 1em;
+
 }
+.content{
+  display: flex;
+  padding: 0 1em 0 1em;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 

@@ -42,6 +42,9 @@ a{
   width: 1024px;
   margin: 0 auto 30px;
 }
+a{
+  text-decoration: none
+}
 .selectable:hover{
   background:#242d4a
 }

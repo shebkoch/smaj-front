@@ -1,6 +1,14 @@
-<div class="content-block">1
+<div class="content-block">
   <p class="big-text">Топ лучших</p>
   <div class="content">
+    <div class="header">
+      <p class="place mini-text">Место</p>
+      <p class="player mini-text">Игрок</p>
+      <p class="mmr mini-text">Ммр</p>
+      <p class="win mini-text">Побед</p>
+      <p class="match mini-text">Матчей</p>
+      <p class="faction mini-text">Лучшая фракция</p>
+    </div>
     <app-player-row *ngIf="players?.length>0" [player]="players[0]" [place]="1"></app-player-row>
     <app-player-row *ngIf="players?.length>1" [player]="players[1]" [place]="2"></app-player-row>
     <app-player-row *ngIf="players?.length>2" [player]="players[2]" [place]="3"></app-player-row>

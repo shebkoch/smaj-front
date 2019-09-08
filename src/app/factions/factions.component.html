@@ -1,0 +1,10 @@
+<div class="content-block">
+  <div class="content">
+    <div class="factions" *ngFor="let faction of factions">
+      <p class="normal-text" [ngStyle]="{'color': getColor(faction)}">{{faction.name}}</p>
+      <p class="normal-text">{{faction.matchCount}}</p>
+      <p class="normal-text">{{faction.winCount}}</p>
+      <p class="normal-text">{{faction.score * 100 | number:'1.0-1'}}</p>
+    </div>
+  </div>
+</div>

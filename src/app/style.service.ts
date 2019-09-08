@@ -30,6 +30,7 @@ export class StyleService {
       case 'Волшебники': return  '#78649f';
       case 'Мемы': return  '#ff6058';
       case 'Игроки': return  '#ffe7d1';
+      case 'Динозавры': return '#87aa50'
     }
   }
   public getAvatar(player: PlayerEntity) {
