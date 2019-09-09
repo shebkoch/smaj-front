@@ -1,6 +1,10 @@
 .content{
   display: flex;
   flex-direction: column;
+  margin-top: 2%;
+}
+.content-block{
+  margin-top: 2%;
 }
 .factions{
   justify-content: space-around;
@@ -10,4 +14,7 @@
 .factions p{
   text-align: left;
   width: 100px;
+}
+.header{
+  line-height: 0;
 }

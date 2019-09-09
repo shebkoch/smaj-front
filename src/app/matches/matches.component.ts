@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatchService} from "../match.service";
 
 @Component({
   selector: 'app-matches',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatchesComponent implements OnInit {
 
-  constructor() { }
+  matches: any[];
+
+  constructor(private matchService: MatchService) { }
 
   ngOnInit() {
   }
