@@ -1,0 +1,25 @@
+.avatar{
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  margin-left: 10px;
+}
+.matches{
+  display: flex;
+  flex-direction: column;
+}
+.match{
+  margin: 1em 1em 1em 3em;
+  display: flex;
+  flex-direction: row;
+}
+.time{
+  width: 200px;
+}
+.rating{
+  width: 200px;
+}
+.winner{
+  border-style : solid;
+  border-color: var(--smaj-green);
+}

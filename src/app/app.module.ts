@@ -45,6 +45,7 @@ registerLocaleData(localeRu, 'ru');
       {path: 'match/:id', component: MatchComponent},
       {path: 'play', component: DistributeComponent},
       {path: 'factions', component: FactionsComponent},
+      {path: 'matches', component: MatchesComponent},
 
     ]),
     FormsModule
