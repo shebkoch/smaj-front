@@ -1,14 +1,17 @@
 .dur{
-  width: 150px;
+  width: 25%;
 }
 .ago{
-  width: 220px;
+  width: 25%;
 }
 .win{
-  width: 200px;
+  width: 20%;
 }
 .fact{
-  width: 250px;
+  width: 35%;
+}
+.bars-block{
+  width: 10%;
 }
 .result-content{
   padding-left: 2em;
@@ -24,7 +27,6 @@
 }
 .bars{
   margin-bottom: 10%;
-  width: 7em;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -49,7 +51,7 @@
 .red{
   color: var(--smaj-red);
 }
-.faction-images img{
+.avatar{
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -61,6 +63,11 @@
 .factions{
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+.faction-images{
+  display: flex;
+  align-items: center;
 }
 .content{
   display: flex;
@@ -81,4 +88,20 @@
   width: 200px;
   display: flex;
   flex-direction: row;
+}
+
+@media screen and (max-width: 767px){
+  .dur{
+    display: none;
+  }
+  .factNames{
+    display: none;
+  }
+  .avatar{
+    width: 40px;
+    height: 40px;
+  }
+  .fact{
+    width: 25%;
+  }
 }

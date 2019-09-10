@@ -8,8 +8,9 @@ import {Observable} from 'rxjs';
 import {of} from 'rxjs';
 import {delay} from 'rxjs/operators';
 import {StyleService} from '../style.service';
-import {dateNames} from '../utils';
+import {dateNames, idByLogin} from '../utils';
 import {ActivatedRoute} from '@angular/router';
+import {log} from "util";
 
 
 @Component({
@@ -27,16 +28,24 @@ export class PlayerInfoComponent implements OnInit {
     this.activatedRoute.params.subscribe(
       params => {
         let id = params['id'];
-        matchService.lastPlayerResult(id).subscribe((
-          data: PlayerResultEntity) => {
-            this.lastResult = data;
-          }
-        );
-        matchService.player(id).subscribe((
-          data: PlayerEntity) => {
-            this.player = data;
-          }
-        );
+        let login = params['login'];
+        if(login != null){
+          localStorage.setItem('login', login);
+          id = idByLogin(login);
+        }
+
+        if (id != null) {
+          matchService.lastPlayerResult(id).subscribe((
+            data: PlayerResultEntity) => {
+              this.lastResult = data;
+            }
+          );
+          matchService.player(id).subscribe((
+            data: PlayerEntity) => {
+              this.player = data;
+            }
+          );
+        }
       }
     )
 

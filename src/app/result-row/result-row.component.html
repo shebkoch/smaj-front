@@ -23,17 +23,17 @@
     </div>
     <div class="factions fact">
       <div class="faction-images">
-        <img src="{{imagePath(result?.factionEntity1)}}">
-        <img class="right" src="{{imagePath(result?.factionEntity2)}}">
+        <img class="avatar" src="{{imagePath(result?.factionEntity1)}}">
+        <img class="avatar right" src="{{imagePath(result?.factionEntity2)}}">
       </div>
-      <div class="key-value-block">
+      <div class="factNames key-value-block">
         <p class="mini-text"
            [ngStyle]="{'color' : styleService.getColor(result?.factionEntity1)}"> {{result?.factionEntity1?.name}}</p>
         <p class="mini-text"
            [ngStyle]="{'color' : styleService.getColor(result?.factionEntity2)}">{{result?.factionEntity2?.name}}</p>
       </div>
     </div>
-    <div class="key-value-block">
+    <div class="key-value-block bars-block">
       <p class="score mini-text">{{result?.score}}/{{result?.matchEntity?.winnerScore}}</p>
       <div class="bars">
         <div class="bar thisScore" [ngStyle]="{'width.%': scoreWidth()}"></div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {idByLogin} from "../utils";
+import {log} from "util";
 
 @Component({
   selector: 'app-top-bar',
@@ -11,5 +13,8 @@ export class TopBarComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  getPlayer(){
+    let login = localStorage.getItem('login');
+    return idByLogin(login);
+  }
 }

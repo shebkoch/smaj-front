@@ -5,6 +5,7 @@ import {StyleService} from '../style.service';
 import {FactionEntity} from '../entity/FactionEntity';
 import {DistributeData} from '../entity/DistributeData';
 import {PlayerEntity} from '../entity/PlayerEntity';
+import {idByLogin} from "../utils";
 
 @Component({
   selector: 'app-distribute',
@@ -21,6 +22,7 @@ export class DistributeComponent implements OnInit {
 
   public generated = false;
   public isStart = false;
+  private canView = false;
 
   data: any;
   postData: any;
@@ -40,6 +42,8 @@ export class DistributeComponent implements OnInit {
         this.allPlayers = true;
       }
     );
+    let login = localStorage.getItem('login');
+    if(idByLogin(login) == 1) this.canView = true;
   }
 
   public submit() {

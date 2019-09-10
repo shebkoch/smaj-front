@@ -1,3 +1,6 @@
+:host {
+  width: 100%;
+}
 .main-info{
   display: flex;
   width: 100%;

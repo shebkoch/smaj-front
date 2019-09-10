@@ -42,6 +42,7 @@ registerLocaleData(localeRu, 'ru');
     HttpClientModule,
     RouterModule.forRoot([
       {path: 'player/:id', component: PlayerInfoComponent},
+      {path: 'login/:login', component: PlayerInfoComponent},
       {path: 'match/:id', component: MatchComponent},
       {path: 'play', component: DistributeComponent},
       {path: 'factions', component: FactionsComponent},

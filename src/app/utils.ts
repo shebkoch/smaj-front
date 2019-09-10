@@ -19,4 +19,15 @@ export const dateNames = (value, x, postfix) => {
   if (x == 'months')  return numpf(value, ' месяц', ' месяца', ' месяцев') + postfix;
   if (x == 'years')  return numpf(value, ' год', ' года', ' лет') + postfix;
 };
+export const idByLogin = (login : string) => {
+
+  switch (login) {
+    case 'shebup': return 1;
+    case 'profitroll': return 2;
+    case 'mesarthim' : return 3;
+    case 'slancelord' : return 4;
+    case 'vega': return 5;
+    case 'gridmon' : return 6;
+  }
+}
 

@@ -58,7 +58,7 @@
         </div>
       </div>
       <button *ngIf="!isStart" (click)="start()" class="button"><p class="normal-text">Начать</p></button>
-      <button *ngIf="isStart" (click)="end()" class="button"><p class="normal-text">Сохранить</p></button>
+      <button *ngIf="isStart && canView" (click)="end()" class="button"><p class="normal-text">Сохранить</p></button>
     </div>
   </div>
 
