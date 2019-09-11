@@ -11,7 +11,7 @@ import {FactionEntity} from '../entity/FactionEntity';
 })
 export class FactionsComponent implements OnInit {
 
-  private factions: any[];
+  public factions: any[];
 
   constructor(private matchService : MatchService,
               private styleService: StyleService) {

@@ -10,7 +10,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class MatchService {
-  serverUrl = 'http://localhost:8091/';
+  serverUrl = 'http://localhost:8091/smaj';
   lastPlayerResultUrl = this.serverUrl+'last_info/';
   resultsUrl = this.serverUrl + 'results/';
   playersUrl = this.serverUrl+'players/';

@@ -22,7 +22,7 @@ export class DistributeComponent implements OnInit {
 
   public generated = false;
   public isStart = false;
-  private canView = false;
+  public canView = false;
 
   data: any;
   postData: any;

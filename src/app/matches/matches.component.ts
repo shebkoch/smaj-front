@@ -12,7 +12,7 @@ export class MatchesComponent implements OnInit {
   matches: any[];
 
   constructor(private matchService: MatchService,
-              private styleService: StyleService) {
+              public styleService: StyleService) {
     matchService.matches().subscribe((
       data: any) => {
         this.matches = data;

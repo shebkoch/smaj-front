@@ -19,7 +19,7 @@ export class ResultRowComponent implements OnInit {
   @Input() public winWidth;
   @Input() public factionWidth;
 
-  constructor( private styleService : StyleService) { }
+  constructor( public styleService : StyleService) { }
 
   ngOnInit() {
   }

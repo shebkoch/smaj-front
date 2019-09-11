@@ -19,11 +19,11 @@ import {log} from "util";
   styleUrls: ['./player-info.component.css']
 })
 export class PlayerInfoComponent implements OnInit {
-  private player: PlayerEntity;
-  private lastResult: PlayerResultEntity = null;
+  public player: PlayerEntity;
+  public lastResult: PlayerResultEntity = null;
   constructor(private activatedRoute: ActivatedRoute,
               private matchService: MatchService,
-              private styleService : StyleService) {
+              public styleService : StyleService) {
     // this.sss = 'sasasa';
     this.activatedRoute.params.subscribe(
       params => {
